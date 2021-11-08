@@ -1,0 +1,126 @@
+@font-face { font-family: Delicious; src: url('PeachesForBreakfast-Regular.otf'); }
+@font-face { font-family: Honey; src: url('Honeyvoid\ DEMO.otf'); }
+
+body {
+    font-family: Delicious !important;
+    background-color: yellow;
+ }
+
+.container{
+    min-height: 1200px;
+    position: relative;
+}
+
+.row>div{
+    height: 650px;
+    position: absolute;
+    top:100px;
+    left:50%;
+}
+.row{
+    perspective: 1500px;
+}
+#cover{
+    background-color: #f06581;
+    z-index:1;
+    backface-visibility: hidden;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    transform-origin: left;
+}
+#left{
+    background-color: rgb(102, 102, 189);
+    left: 0%;
+    backface-visibility: hidden;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    transform-origin: right;
+}
+#right{
+    background-color: rgb(171, 113, 184);
+    overflow-y:auto ; 
+    overflow-x: auto; 
+    
+}
+.button{
+    background-color: crimson;
+    white-space: nowrap;
+    color: skyblue;
+    font-size: 30px;
+    padding: 5px;
+    position: absolute;
+    left: 98%;
+    top:550px;
+    transform: rotate(-90deg);
+    
+}
+.button:hover{
+    cursor: pointer;
+}
+.is-flipped-left{
+    transform:rotateY(180deg);
+}
+.is-flipped-cover{
+    transform:rotateY(-180deg);
+}
+.img{
+    height:100%;
+    width:100%;
+
+}
+.greeting-text{
+    height: 150px;
+    text-align: center;
+    font-size: 50px;
+    line-height:40px;
+}
+.sticker{
+    height: 150px;
+    text-align: center;
+    font-size: 100px;
+}
+.inner{
+    font-size: 25px;
+    line-height:25px;
+}
+.bold{
+    font-family: Honey;
+}
+.boxes{
+    box-sizing: border-box;
+  }
+
+.pic-row{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  align-self: center;
+}
+
+.pic-column {
+    flex: 40%;
+    max-width: 47%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
