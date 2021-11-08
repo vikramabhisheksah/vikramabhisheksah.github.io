@@ -12,7 +12,7 @@ body {
 }
 
 .row>div{
-    height: 650px;
+    height: 800px;
     position: absolute;
     top:100px;
     left:50%;
@@ -35,6 +35,7 @@ body {
     transition: transform 2s;
     transform-style: preserve-3d;
     transform-origin: right;
+    
 }
 #right{
     background-color: rgb(171, 113, 184);
@@ -73,6 +74,7 @@ body {
     text-align: center;
     font-size: 50px;
     line-height:40px;
+    
 }
 .sticker{
     height: 150px;
@@ -82,6 +84,8 @@ body {
 .inner{
     font-size: 25px;
     line-height:25px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .bold{
     font-family: Honey;
